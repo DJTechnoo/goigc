@@ -38,8 +38,9 @@ require (
 	github.com/ziutek/mymysql v0.0.0-20170328153653-1d19cbf98d83
 	golang.org/x/lint v0.0.0-20180702182130-06c8688daad7 // indirect
 	golang.org/x/sys v0.0.0-20170803140359-d8f5ea21b929
-	golang.org/x/text v0.0.0-20170730040918-3bd178b88a81
+	golang.org/x/text v0.3.0
 	golang.org/x/tools v0.0.0-20180904205237-0aa4b8830f48 // indirect
+	google.golang.org/appengine v1.2.0
 	gopkg.in/yaml.v2 v2.0.0-20170721122051-25c4ec802a7d
 	honnef.co/go/tools v0.0.0-20180728063816-88497007e858 // indirect
 )
