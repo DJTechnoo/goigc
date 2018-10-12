@@ -1,4 +1,4 @@
-module github.com/marni/goigc
+module github.com/DJTechnoo/goigc
 
 require (
 	github.com/GoASTScanner/gas v0.0.0-20180904160837-145f1a0bf413 // indirect
