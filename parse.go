@@ -23,6 +23,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"google.golang.org/appengine/urlfetch"
 )
 
 const (
@@ -35,12 +36,14 @@ const (
 // ParseLocation returns a Track object corresponding to the given file.
 //
 // It calls Parse internally, so the file content should be in IGC format.
-func ParseLocation(location string) (Track, error) {
+func ParseLocation(location string, r * http.Request) (Track, error) {
 	var content []byte
 
 	// case http
 	if strings.HasPrefix(location, "http") {
-		resp, err := http.Get(location)
+		ctx := appengine.NewContext(r)
+        client := urlfetch.Client(ctx)
+        resp, err := client.Get(location)
 		if err == nil {
 			defer resp.Body.Close()
 			content, err = ioutil.ReadAll(resp.Body)
